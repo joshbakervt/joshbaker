@@ -1,0 +1,15 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
