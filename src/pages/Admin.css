@@ -1,0 +1,398 @@
+/* ── Login ── */
+.adm-login {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.adm-login-card {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.adm-login-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--text-prim);
+  letter-spacing: 0.02em;
+}
+
+/* ── Shared admin elements ── */
+.adm-mono-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.adm-page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--text-prim);
+  letter-spacing: 0.02em;
+}
+
+.adm-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  color: var(--text-prim);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.adm-input:focus {
+  border-color: var(--border-acc);
+}
+
+.adm-error {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--rust);
+  letter-spacing: 0.05em;
+}
+
+/* ── Buttons ── */
+.adm-btn-primary {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.1rem;
+  background: var(--accent);
+  color: #F5F0E8;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.adm-btn-primary:hover {
+  background: var(--accent-hov);
+  border-color: var(--accent-hov);
+}
+
+.adm-btn-secondary {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.1rem;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border-acc);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.adm-btn-secondary:hover {
+  background: rgba(139, 94, 60, 0.08);
+}
+
+.adm-btn-ghost {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.adm-btn-ghost:hover {
+  color: var(--text-prim);
+  border-color: var(--text-muted);
+}
+
+.adm-btn-danger {
+  color: var(--rust);
+}
+
+.adm-btn-danger:hover {
+  color: #7a3520;
+  border-color: var(--rust);
+}
+
+.adm-logout {
+  color: var(--text-muted);
+}
+
+/* ── Post list ── */
+.adm-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.adm-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.adm-header-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.adm-notice {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.adm-notice strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.adm-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 4rem 0;
+  color: var(--text-muted);
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+}
+
+.adm-post-list {
+  list-style: none;
+}
+
+.adm-post-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.adm-post-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.adm-status {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.adm-status.published {
+  color: var(--moss);
+  background: rgba(90, 107, 74, 0.1);
+  border: 1px solid rgba(90, 107, 74, 0.25);
+}
+
+.adm-status.draft {
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.adm-post-title {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  color: var(--text-prim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.adm-post-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.adm-post-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* ── Editor ── */
+.adm-editor {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+}
+
+.adm-editor-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.adm-back-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.adm-back-btn:hover {
+  color: var(--accent);
+}
+
+.adm-editor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.adm-editor-fields {
+  padding: 2rem 2rem 0;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.adm-title-input {
+  width: 100%;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--text-prim);
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--border);
+  padding: 0 0 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.adm-title-input::placeholder {
+  color: var(--bg-deep);
+}
+
+.adm-excerpt-input {
+  width: 100%;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 0 1.25rem;
+}
+
+.adm-excerpt-input::placeholder {
+  color: var(--bg-deep);
+}
+
+.adm-content-input {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+  padding: 1.5rem 2rem 2rem;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-sec);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.adm-content-input::placeholder {
+  color: var(--bg-deep);
+  font-style: italic;
+}
+
+.adm-preview {
+  flex: 1;
+  padding: 1.5rem 2rem 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.adm-preview-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .adm-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adm-post-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .adm-editor-bar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

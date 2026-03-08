@@ -1,0 +1,88 @@
+.post-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.post-back {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  transition: color 0.2s;
+}
+
+.post-back:hover {
+  color: var(--accent);
+}
+
+.post-not-found {
+  padding: 6rem 0;
+}
+
+.post-not-found h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--text-prim);
+  margin: 1rem 0;
+}
+
+.post-not-found a {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--text-prim);
+  margin-bottom: 1rem;
+}
+
+.post-excerpt {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+  max-width: 540px;
+}
+
+.post-body {
+  max-width: 620px;
+}
+
+.post-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-back-bottom {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.post-back-bottom:hover {
+  color: var(--accent);
+}
