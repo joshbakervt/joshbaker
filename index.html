@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Josh Baker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sky">
+    <div class="clouds-layer clouds-layer-1"></div>
+    <div class="clouds-layer clouds-layer-2"></div>
+    <div class="clouds-layer clouds-layer-3"></div>
+  </div>
+
+  <div id="cube-container">
+    <div class="scene">
+      <div class="cube" id="cube">
+        <div class="cube-face front" data-page="about">ABOUT</div>
+        <div class="cube-face back portrait-face" data-page="about" style="background-image: url('portrait.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="cube-face right" data-page="projects">PROJECTS</div>
+        <div class="cube-face left" data-page="experience">EXPERIENCE</div>
+        <div class="cube-face top name-face" data-page="about">JOSHUA BAKER</div>
+        <div class="cube-face bottom" data-page="contact">CONTACT</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page-container" class="hidden">
+    <button class="back-btn" id="back-btn">&larr; BACK</button>
+    <div class="page-content" id="page-content">
+      <h1 id="page-title"></h1>
+      <div id="page-body"></div>
+    </div>
+  </div>
+
+  <div id="visit-counter"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
