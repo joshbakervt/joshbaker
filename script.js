@@ -28,8 +28,8 @@
       title: 'ABOUT',
       body: `
         <p>Software engineer with 3 years of professional experience, currently building backend services at Dealer.com / Cox Automotive. Day to day I work across the stack but lean toward backend on Spring apps and REST API development, AWS infrastructure, and internal tooling.</p>
-        <p>Outside of work, I like building projects that let me explore something creative. I'm often drawn to audio-visual experiments and especially anything I could use in a creative musical context.</p>
-        <p>Outside of work I enjoy producing music, playing guitar, running, or snowboarding.</p>
+        <p>Outside of work, I'm often drawn to building audio-visual experiments and especially anything I could use in a musical context.</p>
+        <p>In my freetime, I enjoy producing music, playing guitar, running, or snowboarding.</p>
       `
     },
     contact: {
@@ -62,9 +62,9 @@
           </div>
           <ul>
             <li>Develop and maintain Java Spring REST APIs powering dealer-facing products</li>
-            <li>Deploy API endpoints as AWS Lambdas within an Nx monorepo</li>
-            <li>Built a user permissions management tool end-to-end, from API design through React front end</li>
-            <li>Designed a custom AI agent in Copilot Studio and Claude for product managers, incorporating user feedback through iterative prototyping</li>
+            <li>Maintain Node Lambdas within an Nx monorepo</li>
+            <li>Built a user permissions management tool end-to-end using Spring/Typescript/React</li>
+            <li>Collaborated with Product and UX teams to build a product insights AI agent, incorporating user feedback through iterative prototyping</li>
           </ul>
           <div class="tech-tags">Typescript, AWS, Java, Terraform, MySQL, Claude Code</div>
         </div>
@@ -138,7 +138,7 @@
 
         <div class="project">
           <h2><a href="https://github.com/joshbakervt?tab=repositories" target="_blank" rel="noopener">fallingnoise</a></h2>
-          <p>An audio-visual library for displaying musical "rain."</p>
+          <p>A configurable audio-visual React component for displaying musical rain.</p>
         </div>
 
         <div class="project">
@@ -148,7 +148,7 @@
 
         <div class="project">
           <h2><a href="https://github.com/joshbakervt/clab" target="_blank" rel="noopener">clab</a></h2>
-          <p>Centralized codebase for C programming projects, specializing in the audio domain.</p>
+          <p>Centralized codebase for C programming projects specializing in the audio domain.</p>
         </div>
       `
     },
