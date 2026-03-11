@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Josh Baker</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="sky">
@@ -18,10 +18,10 @@
     <div class="scene">
       <div class="cube" id="cube">
         <div class="cube-face front" data-page="about">ABOUT</div>
-        <div class="cube-face back" data-page="blog">BLOG</div>
+        <div class="cube-face back portrait-face" data-page="about" style="background-image: url('portrait.jpg'); background-size: cover; background-position: center;"></div>
         <div class="cube-face right" data-page="projects">PROJECTS</div>
         <div class="cube-face left" data-page="experience">EXPERIENCE</div>
-        <div class="cube-face top" data-page="lab">LAB</div>
+        <div class="cube-face top name-face" data-page="about">JOSHUA BAKER</div>
         <div class="cube-face bottom" data-page="contact">CONTACT</div>
       </div>
     </div>
@@ -34,6 +34,8 @@
       <div id="page-body"></div>
     </div>
   </div>
+
+  <div id="visit-counter"></div>
 
   <script src="script.js"></script>
 </body>

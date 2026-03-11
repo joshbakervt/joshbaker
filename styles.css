@@ -8,7 +8,7 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* ── Sky Background ── */
@@ -130,27 +130,41 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  font-family: 'Press Start 2P', monospace;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
   color: #222;
   background: #b0b0b0;
   border: 3px solid #888;
   box-shadow: inset 0 0 40px rgba(0,0,0,0.15);
   user-select: none;
   cursor: pointer;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: unset;
-  image-rendering: pixelated;
-  letter-spacing: 2px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
   text-shadow:
-    2px 2px 0 rgba(0,0,0,0.2),
-    -1px -1px 0 rgba(255,255,255,0.3);
+    1px 1px 0 rgba(0,0,0,0.15),
+    -1px -1px 0 rgba(255,255,255,0.2);
 }
 
 .cube-face:hover {
   background: #c8c8c8;
   color: #000;
+}
+
+.cube-face.portrait-face {
+  background-color: transparent;
+  box-shadow: none;
+  filter: grayscale(100%);
+}
+
+.cube-face.portrait-face:hover {
+  background-color: transparent;
+}
+
+.cube-face.name-face {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 8px;
 }
 
 .cube-face.front  { transform: rotateY(0deg) translateZ(140px); }
@@ -187,16 +201,15 @@ html, body {
   position: fixed;
   top: 24px;
   left: 24px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
   color: #222;
   background: #b0b0b0;
   border: 3px solid #888;
-  padding: 12px 20px;
+  padding: 8px 20px;
   cursor: pointer;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: none;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   z-index: 10;
   transition: background 0.2s;
 }
@@ -217,20 +230,200 @@ html, body {
 }
 
 .page-content h1 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 600;
   color: #222;
   margin-bottom: 24px;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: none;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 
 .page-content p {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
   color: #333;
-  line-height: 2;
-  -webkit-font-smoothing: none;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.page-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Experience Page ── */
+
+.job {
+  margin-bottom: 32px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-header {
+  margin-bottom: 12px;
+}
+
+.job-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.job-role {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.job-date {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.page-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.page-content ul li {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.page-content ul li::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: #888;
+}
+
+.tech-tags {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  letter-spacing: 1px;
+}
+
+.section-divider {
+  border-top: 2px solid #888;
+  margin: 32px 0;
+}
+
+/* ── Contact Page ── */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.contact-item a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.contact-item a:hover {
+  border-bottom-color: #111;
+}
+
+/* ── Projects Page ── */
+
+.project {
+  margin-bottom: 28px;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.project h2 a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.project h2 a:hover {
+  border-bottom-color: #111;
+}
+
+.page-content a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #888;
+  transition: border-color 0.2s;
+}
+
+.page-content a:hover {
+  border-bottom-color: #111;
+}
+
+/* ── Visit Counter ── */
+
+#visit-counter {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  z-index: 5;
+  opacity: 0.5;
+  letter-spacing: 2px;
 }

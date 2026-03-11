@@ -22,32 +22,136 @@
 
   const DRAG_THRESHOLD = 5;
 
-  // ── Page content (boilerplate) ──
+  // ── Page content ──
   const pages = {
     about: {
       title: 'ABOUT',
-      body: '<p>About page content goes here.</p>'
+      body: `
+        <p>Software engineer with 3 years of professional experience, currently building backend services at Dealer.com / Cox Automotive. Day to day I work across the stack but lean toward backend on Spring apps and REST API development, AWS infrastructure, and internal tooling.</p>
+        <p>Outside of work, I like building projects that let me explore something creative. I'm often drawn to audio-visual experiments and especially anything I could use in a creative musical context.</p>
+        <p>Outside of work I enjoy producing music, playing guitar, running, or snowboarding.</p>
+      `
     },
     contact: {
       title: 'CONTACT',
-      body: '<p>Contact page content goes here.</p>'
+      body: `
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-label">EMAIL</span>
+            <a href="mailto:joshbakervt@gmail.com">joshbakervt@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GITHUB</span>
+            <a href="https://github.com/joshbakervt" target="_blank" rel="noopener">github.com/joshbakervt</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LINKEDIN</span>
+            <a href="https://www.linkedin.com/in/joshbakervt/" target="_blank" rel="noopener">linkedin.com/in/joshbakervt</a>
+          </div>
+        </div>
+      `
     },
     experience: {
       title: 'EXPERIENCE',
-      body: '<p>Experience page content goes here.</p>'
+      body: `
+        <div class="job">
+          <div class="job-header">
+            <h2>Dealer.com / Cox Automotive</h2>
+            <span class="job-role">Software Engineer I</span>
+            <span class="job-date">Sep 2023 - Present</span>
+          </div>
+          <ul>
+            <li>Develop and maintain Java Spring REST APIs powering dealer-facing products</li>
+            <li>Deploy API endpoints as AWS Lambdas within an Nx monorepo</li>
+            <li>Built a user permissions management tool end-to-end, from API design through React front end</li>
+            <li>Designed a custom AI agent in Copilot Studio and Claude for product managers, incorporating user feedback through iterative prototyping</li>
+          </ul>
+          <div class="tech-tags">Typescript, AWS, Java, Terraform, MySQL, Claude Code</div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <h2>Precision Bioassay</h2>
+            <span class="job-role">Web Developer (Part Time)</span>
+            <span class="job-date">Mar 2023 - Sep 2024</span>
+          </div>
+          <ul>
+            <li>Sole developer responsible for full SDLC of Xymp, a web-based bioassay statistical analysis platform</li>
+            <li>Strengthened platform security by refining login system and integrating Twilio API for email and SMS MFA</li>
+            <li>Implemented robust filtering in assay browser with dynamically populated dropdowns and range selectors</li>
+            <li>Improved UI and accessibility with Bootstrap CSS and responsive JavaScript features</li>
+            <li>Debugged build, testing, and deployment automation using Perl and R</li>
+            <li>Introduced Jira for project management and issue tracking</li>
+          </ul>
+          <div class="tech-tags">JavaScript, PHP, Perl, MySQL, Python, Jira</div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <h2>University of Vermont InfoSec</h2>
+            <span class="job-role">Security Operations Specialist</span>
+            <span class="job-date">Aug 2022 - Dec 2022</span>
+          </div>
+          <ul>
+            <li>Built a front-end web interface for viewing and managing MySQL tables to optimize operations on network watchlist databases</li>
+            <li>Introduced an intrusion detection solution for improving mailbox security and phish prevention</li>
+          </ul>
+          <div class="tech-tags">PHP, JavaScript, MySQL</div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <h2>Northern Digital Inc.</h2>
+            <span class="job-role">Software Engineer Intern</span>
+            <span class="job-date">May 2022 - Aug 2022</span>
+          </div>
+          <ul>
+            <li>Developed a Python automation system to analyze and manage data for 5,000+ medical imaging calibration tests, with SQLite for storage and querying</li>
+            <li>Reduced an imaging calibration procedure from 3 days to under 4 hours through bash scripting and automation</li>
+            <li>Collaborated with engineering team using agile methodologies and Jira</li>
+          </ul>
+          <div class="tech-tags">Python, SQLite, Jira, Bash</div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="job">
+          <div class="job-header">
+            <h2>University of Vermont</h2>
+            <span class="job-role">B.S. in Computer Science</span>
+            <span class="job-date">Aug 2019 - Dec 2022</span>
+          </div>
+          <p>Continuing Education Certificate in Computer Software: Cybersecurity</p>
+          <ul>
+            <li>Placed third in Computer Science fair with <a href="https://whatsthedata.com" target="_blank" rel="noopener">What's the Data?</a>, a neuroscience study resource web app built with AWS Lambda, DynamoDB, API Gateway, and HTML/JS/CSS</li>
+          </ul>
+        </div>
+      `
     },
     projects: {
       title: 'PROJECTS',
-      body: '<p>Projects page content goes here.</p>'
+      body: `
+        <div class="project">
+          <h2><a href="https://launchpadcurriculum.com" target="_blank" rel="noopener">Launchpad</a></h2>
+          <p>A neurosurgery learning platform for residents at the University of Vermont.</p>
+        </div>
+
+        <div class="project">
+          <h2><a href="https://github.com/joshbakervt?tab=repositories" target="_blank" rel="noopener">fallingnoise</a></h2>
+          <p>An audio-visual library for displaying musical "rain."</p>
+        </div>
+
+        <div class="project">
+          <h2><a href="https://whatsthedata.com" target="_blank" rel="noopener">What's the Data?</a></h2>
+          <p>Streamlined access to 1,300+ PubMed studies for neuroscience students. Built with AWS S3, Lambda, DynamoDB, and API Gateway.</p>
+        </div>
+
+        <div class="project">
+          <h2><a href="https://github.com/joshbakervt/clab" target="_blank" rel="noopener">clab</a></h2>
+          <p>Centralized codebase for C programming projects, specializing in the audio domain.</p>
+        </div>
+      `
     },
-    lab: {
-      title: 'LAB',
-      body: '<p>Lab page content goes here.</p>'
-    },
-    blog: {
-      title: 'BLOG',
-      body: '<p>Blog page content goes here.</p>'
-    }
   };
 
   // ── Cube transform ──
@@ -266,5 +370,23 @@
     pageContainer.classList.remove('hidden');
   } else {
     startIdle();
+  }
+
+  // ── Visit Counter ──
+
+  const visitCounter = document.getElementById('visit-counter');
+  const STORAGE_KEY = 'jb_visited';
+  const cached = localStorage.getItem(STORAGE_KEY);
+
+  if (cached) {
+    visitCounter.textContent = `visitor #${cached}`;
+  } else {
+    fetch('https://hvkfuvwm9f.execute-api.us-east-1.amazonaws.com/default/addToDynamoDB')
+      .then(r => r.ok ? r.json() : Promise.reject('fetch failed'))
+      .then(count => {
+        localStorage.setItem(STORAGE_KEY, count);
+        visitCounter.textContent = `visitor #${count}`;
+      })
+      .catch(() => {});
   }
 })();
