@@ -31,6 +31,16 @@ html, body {
   height: 100%;
   background-repeat: repeat-x;
   background-size: auto 100%;
+  /* Promote to a dedicated GPU layer so the drift animation is composited
+     off the main thread instead of repainting these large gradient layers. */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Pause the cloud animation while reading a page — avoids blending a moving
+   background behind the translucent, scrolling content panel (mobile jank). */
+body.page-open .clouds-layer {
+  animation-play-state: paused;
 }
 
 .clouds-layer-1 {
@@ -113,6 +123,7 @@ html, body {
   transform: rotateX(-15deg) rotateY(30deg);
   cursor: grab;
   transition: transform 0.05s linear;
+  will-change: transform;
 }
 
 .cube.navigating {
@@ -190,6 +201,8 @@ html, body {
   padding: 40px 20px;
   transition: opacity 0.5s ease, transform 0.5s ease;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 #page-container.hidden {

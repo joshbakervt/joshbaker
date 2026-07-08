@@ -332,6 +332,7 @@
     pageTitle.textContent = data.title;
     pageBody.innerHTML = data.body;
     isOnPage = true;
+    document.body.classList.add('page-open');
     cubeContainer.classList.add('hidden');
     pageContainer.classList.remove('hidden');
     history.pushState({ page }, '', `#${page}`);
@@ -339,6 +340,7 @@
 
   function showCube() {
     isOnPage = false;
+    document.body.classList.remove('page-open');
     pageContainer.classList.add('hidden');
     cubeContainer.classList.remove('hidden');
     history.pushState(null, '', window.location.pathname);
@@ -360,6 +362,7 @@
       pageTitle.textContent = data.title;
       pageBody.innerHTML = data.body;
       isOnPage = true;
+      document.body.classList.add('page-open');
       cubeContainer.classList.add('hidden');
       pageContainer.classList.remove('hidden');
     } else {
@@ -376,6 +379,7 @@
     pageTitle.textContent = data.title;
     pageBody.innerHTML = data.body;
     isOnPage = true;
+    document.body.classList.add('page-open');
     cubeContainer.classList.add('hidden');
     pageContainer.classList.remove('hidden');
   } else {
