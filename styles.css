@@ -102,6 +102,7 @@ html, body {
   width: 280px;
   height: 280px;
   perspective: 800px;
+  touch-action: none;
 }
 
 .cube {

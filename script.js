@@ -27,9 +27,11 @@
     about: {
       title: 'ABOUT',
       body: `
-        <p>Software engineer with 3 years of professional experience, currently building backend services at Dealer.com / Cox Automotive. Day to day I work across the stack but lean toward backend on Spring apps and REST API development, AWS infrastructure, and internal tooling.</p>
-        <p>Outside of work, I'm often drawn to building audio-visual experiments and especially anything I could use in a musical context.</p>
-        <p>In my freetime, I enjoy producing music, playing guitar, running, or snowboarding.</p>
+        <p>Software engineer with 3 years of professional experience, currently focused on data and platform at Cox Automotive. Day-to-day I work across the stack but my primary focus is on Spring apps, REST APIs, AWS infrastructure, and React.</p>
+        <p>As an engineer, I'm passionate about making sense of complexity and crafting useful, reliable products built around data. My work has maintained a consistent focus on systems that demand consistency, accuracy, and traceability.</p>
+        <p>I enjoy end-to-end ownership and have strong experience working directly with clients, iterating to suit evolving needs.</p>
+        <p>As a musician and someone who loves creative experimentation, I'm often drawn to audio software, especially anything I can use in a musical context.</p>
+        <p>In my free time, I enjoy producing music, playing guitar, running, and snowboarding.</p>
       `
     },
     contact: {
@@ -61,12 +63,13 @@
             <span class="job-date">Sep 2023 - Present</span>
           </div>
           <ul>
-            <li>Develop and maintain Java Spring REST APIs powering dealer-facing products</li>
-            <li>Maintain Node Lambdas within an Nx monorepo</li>
-            <li>Built a user permissions management tool end-to-end using Spring/Typescript/React</li>
-            <li>Collaborated with Product and UX teams to build a product insights AI agent, incorporating user feedback through iterative prototyping</li>
+            <li>Deliver a greenfield User Permissions Manager in Dealer Center as primary engineer: discovery, Java REST endpoints, Lambda integration, and React/TypeScript front-end</li>
+            <li>Lead legacy modernization across multiple Spring Boot apps: ControlCenter Grails app into REST read/write endpoints, AWS SDK migrations, and JWT-authorizer Lambda refactors</li>
+            <li>Build event-driven Java handlers consuming Common User Platform events via SQS, keeping user data consistent across application databases in real time</li>
+            <li>Provision AWS and Kubernetes infrastructure with Terraform, maintain CI/CD pipelines in GitHub Actions, and own availability and incident response for production services</li>
+            <li>Design, build, and maintain CC9-API, the central REST data-access layer for account and product data across multiple production applications</li>
           </ul>
-          <div class="tech-tags">Typescript, AWS, Java, Terraform, MySQL, Claude Code</div>
+          <div class="tech-tags">TypeScript, React, AWS, Java, Terraform, MySQL, Claude Code</div>
         </div>
 
         <div class="job">
@@ -76,12 +79,9 @@
             <span class="job-date">Mar 2023 - Sep 2024</span>
           </div>
           <ul>
-            <li>Sole developer responsible for full SDLC of Xymp, a web-based bioassay statistical analysis platform</li>
-            <li>Strengthened platform security by refining login system and integrating Twilio API for email and SMS MFA</li>
-            <li>Implemented robust filtering in assay browser with dynamically populated dropdowns and range selectors</li>
-            <li>Improved UI and accessibility with Bootstrap CSS and responsive JavaScript features</li>
-            <li>Debugged build, testing, and deployment automation using Perl and R</li>
-            <li>Introduced Jira for project management and issue tracking</li>
+            <li>Sole developer on a small team, owning the full software development lifecycle of Xymp, a web-based bioassay statistical analysis platform</li>
+            <li>Hardened platform security by refining the authentication system and integrating the Twilio API for email and SMS multi-factor authentication</li>
+            <li>Built a dynamic assay-data browser with dependent dropdown and range-based filtering, plus responsive front-end features across the app</li>
           </ul>
           <div class="tech-tags">JavaScript, PHP, Perl, MySQL, Python, Jira</div>
         </div>
@@ -121,10 +121,6 @@
             <span class="job-role">B.S. in Computer Science</span>
             <span class="job-date">Aug 2019 - Dec 2022</span>
           </div>
-          <p>Continuing Education Certificate in Computer Software: Cybersecurity</p>
-          <ul>
-            <li>Placed third in Computer Science fair with <a href="https://whatsthedata.com" target="_blank" rel="noopener">What's the Data?</a>, a neuroscience study resource web app built with AWS Lambda, DynamoDB, API Gateway, and HTML/JS/CSS</li>
-          </ul>
         </div>
       `
     },
@@ -133,22 +129,24 @@
       body: `
         <div class="project">
           <h2><a href="https://launchpadcurriculum.com" target="_blank" rel="noopener">Launchpad</a></h2>
-          <p>A neurosurgery learning platform for residents at the University of Vermont.</p>
+          <ul>
+            <li>Solo-designed, built, and deployed a structured online learning platform for UVM Medical Center Neurosurgery residents</li>
+          </ul>
+          <div class="tech-tags">Next.js, TypeScript, Node.js, AWS, PostgreSQL</div>
         </div>
 
         <div class="project">
-          <h2><a href="https://github.com/joshbakervt?tab=repositories" target="_blank" rel="noopener">fallingnoise</a></h2>
+          <h2><a href="https://whatsthedata.com" target="_blank" rel="noopener">What's the Data</a></h2>
+          <ul>
+            <li>Authored all backend serverless functions in Python (AWS Lambda): CSV ingestion, PDF extraction via Textract, and Bedrock LLM calls to structure medical-study text into JSON</li>
+            <li>Built client-facing tools to parse, validate, and publish research data, persisting structured entries to DynamoDB</li>
+          </ul>
+          <div class="tech-tags">Python, AWS Lambda, Textract, Bedrock, DynamoDB, React</div>
+        </div>
+
+        <div class="project">
+          <h2><a href="https://github.com/joshbakervt/fallingnoise" target="_blank" rel="noopener">fallingnoise</a></h2>
           <p>A configurable audio-visual React component for displaying musical rain.</p>
-        </div>
-
-        <div class="project">
-          <h2><a href="https://whatsthedata.com" target="_blank" rel="noopener">What's the Data?</a></h2>
-          <p>Streamlined access to 1,300+ PubMed studies for neuroscience students. Built with AWS S3, Lambda, DynamoDB, and API Gateway.</p>
-        </div>
-
-        <div class="project">
-          <h2><a href="https://github.com/joshbakervt/clab" target="_blank" rel="noopener">clab</a></h2>
-          <p>Centralized codebase for C programming projects specializing in the audio domain.</p>
         </div>
       `
     },
@@ -207,6 +205,17 @@
     } else {
       scheduleIdle();
     }
+  }
+
+  // The browser can claim a touch gesture mid-drag (e.g. as a scroll) and fire
+  // pointercancel instead of pointerup. Without this, isDragging stays true and
+  // the cube gets stuck. Clean up state and resume idle spin.
+  function onPointerCancel() {
+    if (!isDragging) return;
+    isDragging = false;
+    velX = 0;
+    velY = 0;
+    scheduleIdle();
   }
 
   // ── Inertia ──
@@ -341,6 +350,7 @@
   document.addEventListener('pointerdown', onPointerDown);
   document.addEventListener('pointermove', onPointerMove);
   document.addEventListener('pointerup', onPointerUp);
+  document.addEventListener('pointercancel', onPointerCancel);
   cube.addEventListener('click', onFaceClick);
   backBtn.addEventListener('click', showCube);
 
